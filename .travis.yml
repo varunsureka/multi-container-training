@@ -8,7 +8,7 @@ after_success:
   - docker build -t sureka28/multi-client ./client
   - docker build -t sureka28/multi-nginx ./nginx
   - docker build -t sureka28/multi-server ./server
-  - docker build -t sureka28/multi/worker ./worker
+  - docker build -t sureka28/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push sureka28/multi-client
   - docker push sureka28/multi-nginx
